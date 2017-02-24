@@ -1,5 +1,4 @@
-# DISCLAIMER
-This is **not** the official GitHub repository for the MITLM utility
+### DISCLAIMER: This is **not** the official GitHub repository for the MITLM utility
 This is only a fork using the CMake build management utility
 Check the official repository at https://github.com/mitlm/mitlm
 Acknowledgements are reproduced from the official README at the end of the file
