@@ -179,7 +179,7 @@ InterpolatedNgramLM::GetMask(vector<BitVector> &probMaskVectors,
         // boProbMasks[backoffs] |= bowMasks[hists];
         probMasks = probMaskVectors[o];
         for (size_t i = 0; i < probMasks.length(); ++i) {
-            if (bowMasks[hists[i]]) {
+            if (bowMasks[hists[i]] && backoffs[i] != -1) {
                 probMasks[i] = 1;
                 boProbMasks[backoffs[i]] = 1;
             }

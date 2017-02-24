@@ -804,10 +804,13 @@ NgramModel::_ComputeBackoffs() {
         IndexVector &loBackoffs(_backoffVectors[o - 1]);
         IndexVector &backoffs(_backoffVectors[o]);
         backoffs.resize(_vectors[o].size());
-        for (NgramIndex i = 0; i < (NgramIndex)backoffs.length(); ++i)
+        for (NgramIndex i = 0; i < (NgramIndex)backoffs.length(); ++i){
             backoffs[i] = _vectors[o-1].Find(loBackoffs[_vectors[o]._hists[i]],
                                              _vectors[o]._words[i]);
-        assert(allTrue(backoffs != NgramVector::Invalid));
+//             if(backoffs[i] == -1)
+//               std::cout << _vectors[o]._words[i] << std::endl;
+        }
+//         assert(allTrue(backoffs != NgramVector::Invalid));
     }
 }
 
