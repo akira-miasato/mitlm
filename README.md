@@ -1,9 +1,11 @@
-### DISCLAIMER: This is **not** the official GitHub repository for the MITLM utility
-This is only a fork using the CMake build management utility  
-Check the official repository at https://github.com/mitlm/mitlm  
-Acknowledgements are reproduced from the official README at the end of the file  
+### DISCLAIMER: This is **not** the official GitHub repository for the MITLM project
+This is only a fork using the CMake build management utility.  
+Check the official repository at https://github.com/mitlm/mitlm.  
+Acknowledgements are reproduced from the official README at the end of the file.  
 
-This project was created as an alternative to the autotools-based build management from the official repository. The CMakeLists.txt file is very minimal, so any contribution is welcome.
+This project was created as an alternative to the autotools-based build management
+from theofficial repository. The CMakeLists.txt file is very minimal, so any
+contribution is welcome.
 
 TODOs:
 * Tests
