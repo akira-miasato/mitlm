@@ -104,7 +104,7 @@ int main(int argc, char* argv[]) {
     bool writeBinary = mitlm::AsBoolean(opts["write-binary"]);
     mitlm::Logger::SetVerbosity(atoi(opts["verbose"]));
     if (!opts["lm"]) {
-        mitlm::Logger::Error(0, "Language model must be specified using -lm.");
+        mitlm::Logger::Error(0, "Language model must be specified using -lm.\n");
         exit(1);
     }
 
