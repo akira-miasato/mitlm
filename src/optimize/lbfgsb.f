@@ -1,7 +1,7 @@
 c================    L-BFGS-B (version 2.1)   ==========================
-
       subroutine setulb(n, m, x, l, u, nbd, f, g, factr, pgtol, wa, iwa,
      +                 task, iprint,  csave, lsave, isave, dsave)
+      use iso_c_binding
 
       character*60     task, csave
       logical          lsave(4)

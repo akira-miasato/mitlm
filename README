@@ -1,77 +1,27 @@
-=============================
-MIT Language Modeling Toolkit
-=============================
+# DISCLAIMER
+This is **not** the official GitHub repository for the MITLM utility
+This is only a fork using the CMake build management utility
+Check the official repository at https://github.com/mitlm/mitlm
+Acknowledgements are reproduced from the official README at the end of the file
 
-The MIT Language Modeling (MITLM) toolkit is a set of tools designed
-for the efficient estimation of statistical n-gram language models
-involving iterative parameter estimation.  It achieves much of its
-efficiency through the use of a compact vector representation of
-n-grams.  Details of the data structure and associated algorithms can
-be found in the following paper.
+This project was created as an alternative to the autotools-based build management from the official repository. The CMakeLists.txt file is very minimal, so any contribution is welcome.
 
-  * Bo-June (Paul) Hsu and James Glass. Iterative Language Model
-    Estimation: Efficient Data Structure & Algorithms.  In
-    Proc. Interspeech, 2008.
+TODOs:
+* Tests
+* Portability assessment (specially with Fortran/C bindings)
 
-Currently, MITLM supports the following features:
+Current tested environments:
+* Ubuntu 14.04 with GCC/G++ 4.9.4 and equivalent libfortran/gfortran
+* Ubuntu 16.04 with GCC/G++ 5.4.0 under ppc64le architecture
 
-  * Smoothing: Modified Kneser-Ney, Kneser-Ney, maximum likelihood
-  * Interpolation: Linear interpolation, count merging, generalized
-    linear interpolation
-  * Evaluation: Perplexity
-  * File formats: ARPA, binary, gzip, bz2
+Dependency list (expected to work, file an issue if this is not the case):
+* ANSI C++/Fortran compiler (GCC 4.7.1+)
+* libgfortran (version should match your GCC's)
+* CMake 2.8.12+
 
-MITLM is available for download under the MIT License. It has been
-built and tested on 32-bit and 64-bit Intel CPUs running Debian Linux
-7.0. It currently requires the following:
-
-  * ANSI C++/Fortran compiler (GCC 4.7.1+)
-
-For more information about MITLM, please visit:
-
-  https://code.google.com/p/mitlm/
-
-If you find any BUG and/or want to provide a patch, please file an
-issue about it at:
-
-  https://code.google.com/p/mitlm/issues/list
-
-===================================
-Installation from source repository
-===================================
-
-MITLM uses autoconf to detect environment features and configure
-building. If you want to install from the source repository,
-instead of downloading a packaged version, you will need the
-following additional tools (these are not needed if you
-install from a packaged version):
-          autoconf (>=2.69)
-          automake/aclocal
-          libtool
-          autoconf-archive
-
-If you install from source repository, in order to create the
-configure script, you will need to run (this is not needed if you
-install from a packaged version):
-          ./autogen.sh
-
-Finally you can build and install MITLM using the standard procedure:
-          ./configure
-          make
-          make install
-
-=================================
-Installation from packaged source
-=================================
-
-You can build and install MITLM using the standard procedure:
-          ./configure
-          make
-          make install
-
-===============
-Acknowledgments
-===============
+================
+Acknowledgements
+================
 
 The design and implementation of this toolkit benefited significantly
 from the SRI Language Modeling Toolkit by Andreas Stolcke.
